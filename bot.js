@@ -1,6 +1,6 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'w'
+const prefix = '$'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -340,7 +340,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'whelp') {
+    if (message.content === '$help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .addField('play', 'لتشغيل اغنية')
@@ -367,8 +367,8 @@ client.on('message', message => {
 
 
 
-    const adminprefix = "w";
-const devs = ['498566145071120385','531033059294838794'];
+    const adminprefix = "$";
+const devs = ['536627741165092871','540179986632540170'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
